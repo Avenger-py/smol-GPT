@@ -8,7 +8,7 @@ import sys
 
 
 def parse_args():
-    parser = argparse.ArgumentParser(description="Training parameters")
+    parser = argparse.ArgumentParser(description="Infer parameters")
     parser.add_argument("--model_path", default="checkpoints/ckpt_v4_ep10000.pt", help="Path to the model to infer with")
     parser.add_argument("--prompt", type=str, default="The Amazon rainforest is", help="Input text to the model")
     parser.add_argument("--max_new_tokens", type=int, default=100, help="Number of tokens to generate")
