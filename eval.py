@@ -8,7 +8,7 @@ from sklearn.metrics import precision_score, recall_score, f1_score
 import torch.nn.functional as F
 
 def parse_args():
-    parser = argparse.ArgumentParser(description="Training parameters")
+    parser = argparse.ArgumentParser(description="Eval parameters")
     parser.add_argument("--model_path", default="checkpoints/ckpt_v4_ep10000.pt", help="Path to the model to infer with")
     parser.add_argument("--test_data_path", default="wikitext103/test_embd.bin", help="Path to the test dataset")
     parser.add_argument("--eval_epochs", type=int, default=100, help="Number of epochs to evaluate")
