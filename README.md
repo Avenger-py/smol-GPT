@@ -21,7 +21,7 @@ I have used wikitest103 dataset with the following split:
 - Test: 290k tokens
 
 Instructions to prepare the dataset:
-- Go to [https://huggingface.co/datasets/Salesforce/wikitext/tree/main/wikitext-103-raw-v1] and download all the 4 parquet files.
+- Go to https://huggingface.co/datasets/Salesforce/wikitext/tree/main/wikitext-103-raw-v1 and download all the 4 parquet files.
 - Place them in the `wikitext103` folder.
 - run `prepare_data.py`.
 - 3 files will be generated: `train_embd.bin`, `val_embd.bin`, `test_embd.bin`. Keep the files here only.
