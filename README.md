@@ -157,10 +157,10 @@ options:
 ```
 
 ## To do:
-- Introduce more useful metrics like ROUGE, BLEU etc
-- Implement Flash attention
-- Make the code more efficient
-- Introduce more complexity and new architecural changes (eg.., ROPE embeddings)
+- Introduce more useful metrics like ROUGE, BLEU etc.
+- Implement Flash attention.
+- Make the code more efficient.
+- Introduce more complexity and new architecural changes (eg., ROPE embeddings).
 
 ## Acknowledgement
-The code is heavily inspired by, Andrej Karpathy's [NanoGPT](https://github.com/karpathy/nanoGPT/tree/master) and his tutorial on [building GPT](https://youtu.be/kCc8FmEb1nY?si=3cN5plr_WInoWegP)
+The code is heavily inspired by the :goat: Andrej Karpathy's [NanoGPT](https://github.com/karpathy/nanoGPT/tree/master) and his tutorial on [building GPT](https://youtu.be/kCc8FmEb1nY?si=3cN5plr_WInoWegP)
