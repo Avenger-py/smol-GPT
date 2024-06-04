@@ -12,6 +12,8 @@ GPT-22M model training run visualized:
 ```
 pip install torch numpy tiktoken wandb tqdm sklearn pandas
 ```
+Wandb api key is also needed, which is free. More on it [here](https://docs.wandb.ai/quickstart).
+
 ## Dataset
 I have used wikitest103 dataset with the following split:
 - Train: 122M tokens
@@ -163,4 +165,4 @@ options:
 - Introduce more complexity and new architecural changes (eg., ROPE embeddings).
 
 ## Acknowledgement
-The code is heavily inspired by the :goat: Andrej Karpathy's [NanoGPT](https://github.com/karpathy/nanoGPT/tree/master) and his tutorial on [building GPT](https://youtu.be/kCc8FmEb1nY?si=3cN5plr_WInoWegP)
+The code is heavily inspired by the :goat: Andrej Karpathy's [NanoGPT](https://github.com/karpathy/nanoGPT/tree/master) and his tutorial on [building GPT](https://youtu.be/kCc8FmEb1nY?si=3cN5plr_WInoWegP).
