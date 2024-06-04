@@ -1,5 +1,6 @@
 # smol-GPT
 I built a small (22M parameter) **GPT-2 like transformer language model** from scratch and trained it on Wikitext103 dataset.
+
 ![smol-GPT](assets/smol-cat.jpeg)
 
 ## Results
