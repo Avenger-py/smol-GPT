@@ -101,7 +101,7 @@ The Amazon rainforest is not known from the Glasgow and St. Nicholas is of the 1
 " Coatbridge has extensively diverged the population of Scottish colours around Coatbridge in its fifth century . Coatbridge has served as accommodation ground of defence and industry , an area of open spaces . Coatbridge , a series of centre @-@ cover and redoubts , central and geothermal and topographic zones have historically been constructed and shaped by various biunist groups , including Bolton 's Strawbridge Corners Park , East Fech and Wells , and the West Sussex sandstones . Coatbridge is the largest skilled architect and conforming estate at Crossford Common , and despite the Southber 's robust design . Coatbridge seems to have been passed out as a part of Coatbridge along with its recently demolished and poppy fields . Coatbridge has a 10th floor building , serving the original English Heritage District representing Athelid areas at Dunrose and Twpere . Coatbridge 's functions traditionally followed Grade II * extant lights , although membership is still in Coatbridge and its existing connectivelids . Coatbridge is home to numerous major heritage sites .
 "
 ```
-![smol-GPT][assets/not_gr8_not_terrible.jpg]
+![smol-GPT](assets/not_gr8_not_terrible.jpg)
 
 Haha, not bad I guess. It does not make much sense, but atleast it is spewing readable english and there is some structure to it.
 
