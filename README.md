@@ -3,6 +3,7 @@ Built a small (22M params) GPT 2 like transformer language model from scratch an
 
 ## Results
 Trained on T4 gpu on Kaggle. `val_loss` can be brought down further by simply training for more iterations or by changing learning rate or other hyper-parameters in `config.py`
+
 GPT-22M model training run visualized:
 
 ![smol-GPT](assets/GPT-22M_training_run.png)
