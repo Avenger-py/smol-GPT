@@ -1,7 +1,7 @@
 # smol-GPT
 I built a small (22M parameter) **GPT-2 like transformer language model** from scratch and trained it on Wikitext103 dataset.
 
-![smol-GPT](assets/smol-cat.jpeg)
+<img src="https://github.com/Avenger-py/smol-GPT/blob/main/assets/smol-cat.jpeg" width="100" height="100">
 
 ## Results
 Trained on T4 gpu on Kaggle. `val_loss` can be brought down further by simply training for more iterations or by changing learning rate or other hyper-parameters in `config.py`.
