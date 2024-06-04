@@ -1,5 +1,5 @@
 # smol-GPT
-Built a small (22M params) GPT 2 like transformer language model from scratch and trained it on Wikitext103 dataset.
+Built a small (22M parameter) GPT 2 like transformer language model from scratch and trained it on Wikitext103 dataset.
 
 ## Results
 Trained on T4 gpu on Kaggle. `val_loss` can be brought down further by simply training for more iterations or by changing learning rate or other hyper-parameters in `config.py`.
@@ -19,9 +19,9 @@ I have used wikitest103 dataset with the following split:
 - Test: 290k tokens
 
 Instructions to prepare the dataset:
-- Go to [https://huggingface.co/datasets/Salesforce/wikitext/tree/main/wikitext-103-raw-v1] and download all the 4 parquet files
-- Place them in the `wikitext103` folder
-- run `prepare_data.py`
+- Go to [https://huggingface.co/datasets/Salesforce/wikitext/tree/main/wikitext-103-raw-v1] and download all the 4 parquet files.
+- Place them in the `wikitext103` folder.
+- run `prepare_data.py`.
 - 3 files will be generated: `train_embd.bin`, `val_embd.bin`, `test_embd.bin`. Keep the files here only.
 
 ## Training
@@ -74,4 +74,79 @@ options:
                         Path to the checkpoint to resume training from
 ```
 ## Inference
+Here is a sample inference from the 22M model:
+```
+The Amazon rainforest is not known from the Glasgow and St. Nicholas is of the 1999 Nintendo Entertainment Expo , Japanese retail at the Toronto International Exhibition Exhibition . The impact of ancient jewelry is tourism and horticultural conditions . The city of Dunmoreland Castle is one of the general rocks at least , a 150 @-@ metre long gallery sold in the winter . In town , workforce fluctuates in the 15 @,@ 000 litres ( 393 @,@ 300 yd ) of high quality annual energy revenue of 20 items stalls . At Pecke muts of about thirty per cent of visitors attended the pool , ranking at the top of the roofs on court scale and the top of the system 's rooms . Trade and suspension of buildings are easy to assess and mouse design , with possible planning for the opening down until the first floor has scale restoration .
+"
+" The largest operating tower in Coatbridge is the main gate coach is the Hathazwalburam Lakkenwa , the symbol of the NTwaqs ( Taddoa City @-@ Peir ) .
+"
+""
+" = = = Outcrossing and sash = = =
+"
+""
+" The top of Coatbridge is the lie in Coatbridge railway , at Eckfeldwe , in Burythreshold and the Yellow River subdivision near the head of Coatbridge . Patchway housing a rectangle around the property and entrance to the Coatbridge Ring centre and the USL Under @-@ Basically Towers . These are operated by Great YOG . Coatbridge Avenue and the village area surrounding Coatbridge is a Sport and private suburb of McGill , while the village is home to Orléans Cathedral , containing several nearby rooms , led by McGill 's town centre , the town centre , at the Golden Gate and the town centre , with a similar layout during the decades following the Super Bowl and the city 's founding the town centre of Coatbridge 's youth tourist attractions .
+"
+```
+![smol-GPT][assets/not_gr8_not_terrible.jpg]
+
+Haha, not bad I guess. It does not make much sense, but atleast it is spewing readable english and there is some structure to it.
+
+Run `infer.py` for sampling/inferring from the model:
+```sh
+python infer.py
+```
+You can set the following args when executing `infer.py`:
+```
+Infer parameters
+
+options:
+  -h, --help            show this help message and exit
+  --model_path MODEL_PATH
+                        Path to the model to infer with
+  --prompt PROMPT       Input text to the model
+  --max_new_tokens MAX_NEW_TOKENS
+                        Number of tokens to generate
+  --device DEVICE       Device to use 'cuda' or 'cpu'
+  --stream_text         Stream text
+```
+
 ## Evaluation
+I have evaluated the 22M model checkpoint (after training for about 10k iterations) on the test dataset. Here are the results:
+```
+Test loss: 3.7307
+Test perplexity: 41.7096
+Test precision: 0.2762
+Test recall: 0.2569
+Test f1: 0.2591
+Test accuracy: 50.9237
+```
+Not bad for a small model with relatively simple architecture, no data cleaning and only 10k iterations :)
+
+Running `eval.py` is easy:
+```sh
+python infer.py
+```
+
+Provide the following arguments to the script:
+```
+Eval parameters
+
+options:
+  -h, --help            show this help message and exit
+  --model_path MODEL_PATH
+                        Path to the model to infer with
+  --test_data_path TEST_DATA_PATH
+                        Path to the test dataset
+  --eval_epochs EVAL_EPOCHS
+                        Number of epochs to evaluate
+  --device DEVICE       Device to use 'cuda' or 'cpu'
+```
+
+## To do:
+- Introduce more useful metrics like ROUGE, BLEU etc
+- Implement Flash attention
+- Make the code more efficient
+- Introduce more complexity and new architecural changes (eg.., ROPE embeddings)
+
+## Acknowledgement
+The code is heavily inspired by, Andrej Karpathy's [NanoGPT](https://github.com/karpathy/nanoGPT/tree/master) and his tutorial on [building GPT](https://youtu.be/kCc8FmEb1nY?si=3cN5plr_WInoWegP)
