@@ -138,7 +138,7 @@ Not bad for a small model with relatively simple architecture, no data cleaning 
 
 Running `eval.py` is easy:
 ```sh
-python infer.py
+python eval.py
 ```
 
 Provide the following arguments to the script:
