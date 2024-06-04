@@ -16,8 +16,9 @@ pip install torch numpy tiktoken wandb tqdm sklearn pandas
 I have used wikitest103 dataset with the following split:
 - Train: 122M tokens
 - Validation: 250K tokens
-- Test: 290k
+- Test: 290k tokens
 
 ## Training
+
 ## Inference
 ## Evaluation
