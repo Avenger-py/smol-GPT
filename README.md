@@ -25,6 +25,53 @@ Instructions to prepare the dataset:
 - 3 files will be generated: `train_embd.bin`, `val_embd.bin`, `test_embd.bin`. Keep the files here only.
 
 ## Training
+GPU is recommended for training. The code is flexible and you can increase/decrease the model parameters. Here's how to train the model:
+```sh
+python train.py --config path_to_config(config.py by default)
+```
+You can also set the following training params when executing `train.py` or provide them in your config file:
 
+```
+Training parameters
+
+options:
+  -h, --help            show this help message and exit
+  --config CONFIG       Path to the configuration file (cofig.py by default)
+  --batch_size BATCH_SIZE
+                        Batch size
+  --grad_accum_steps GRAD_ACCUM_STEPS
+                        Gradient accumulation steps
+  --context_length CONTEXT_LENGTH
+                        Context length
+  --n_layer N_LAYER     Number of transformer layers
+  --n_head N_HEAD       Number of attention heads
+  --vocab_size VOCAB_SIZE
+                        Vocabulary size
+  --n_embd N_EMBD       Embedding dimension
+  --bias                Use bias in the model
+  --dropout DROPOUT     Dropout rate
+  --lr LR               Learning rate
+  --min_lr MIN_LR       Minimum learning rate
+  --weight_decay WEIGHT_DECAY
+                        Weight decay
+  --max_iters MAX_ITERS
+                        Maximum iterations to train for
+  --lr_decay_iters LR_DECAY_ITERS
+                        Decay learning rate upto this iteration
+  --warmup_iters WARMUP_ITERS
+                        Warm up iterations
+  --eval_epochs EVAL_EPOCHS
+                        Number of evaluation epochs
+  --eval_intervel EVAL_INTERVEL
+                        Evaluation interval
+  --device DEVICE       Device to use 'cuda' or 'cpu'
+  --save_chkpt_epoch SAVE_CHKPT_EPOCH
+                        Save checkpoint every N epochs
+  --checkpoint_path CHECKPOINT_PATH
+                        Path to save checkpoints
+  --resume              Resume training
+  --load_checkpoint_path LOAD_CHECKPOINT_PATH
+                        Path to the checkpoint to resume training from
+```
 ## Inference
 ## Evaluation
