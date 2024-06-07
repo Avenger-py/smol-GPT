@@ -163,7 +163,7 @@ options:
 ## To do:
 - Introduce more useful metrics like ROUGE, BLEU etc.
 - Implement Flash attention.
-- Make the code more efficient.
+- Make the code, specially training, more efficient & faster.
 - Introduce more complexity and new architecural changes (eg., ROPE embeddings).
 
 ## Acknowledgement
